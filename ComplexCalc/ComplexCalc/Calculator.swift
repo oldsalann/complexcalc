@@ -39,7 +39,7 @@ class Calculator {
     }
     
     func multiply(_ nums : [Int]) -> Int {
-        var ret = 0;
+        var ret = 1;
         for i in nums {
             ret = ret * i
         }
