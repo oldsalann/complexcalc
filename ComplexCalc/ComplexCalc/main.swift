@@ -38,7 +38,7 @@ assert(calc.mathOp(args: [1, 2, 3, 4, 5], beg: 0, op: { $0 + $1 }) == 15)
     // this is (((((0 op 1) op 2) op 3) op 4) op 5)
 assert(calc.mathOp(args: [1, 1, 1, 1, 1], beg: 1, op: { $0 * $1 }) == 1)
     // this is (((((1 op 1) op 1) op 1) op 1) op 1)
-
+*/
 let p1 = (5, 5)
 let p2 = (12, -27)
 let p3 = (-4, 4)
@@ -53,4 +53,3 @@ let pd2 = ["x": -4, "y": 4]
 assert(calc.add(lhs: pd1, rhs: pd2) == ["x": 1, "y": 9])
 assert(calc.subtract(lhs: pd1, rhs: pd2) == ["x": 9, "y": 1])
 
-*/
