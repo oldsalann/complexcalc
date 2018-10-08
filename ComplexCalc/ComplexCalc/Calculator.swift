@@ -10,12 +10,7 @@ import Foundation
 
 // All your work will go in here
 class Calculator {
-    var left : Int
-    var right: Int
-    
     init() {
-        self.left = 0
-        self.right = 0
     }
     
     func mathOp(lhs: Int, rhs: Int, op: (Int, Int) -> Int) -> Int {
