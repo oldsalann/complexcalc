@@ -18,7 +18,19 @@ class Calculator {
         self.right = 0
     }
     
-    func add(lhs: Int, rhs: Int) -> Int {
+    func mathOp(lhs: Int, rhs: Int, op: (Int, Int) -> Int) -> Int {
+        return op(lhs, rhs)
+    }
+    
+    func mathOp(args: [Int], beg: Int, op: (Int,Int) -> Int) -> Int {
+        var total = beg
+        for i in 0...(args.count - 1) {
+            total = op(total, args[i])
+        }
+        return total
+    }
+    
+    func add (lhs: Int, rhs: Int) -> Int {
         return lhs + rhs
     }
     
@@ -28,6 +40,10 @@ class Calculator {
             ret = ret + i
         }
         return ret
+    }
+    
+    var add = {(a1: Int, a2: Int) -> Int in
+        return a1 + a2
     }
     
     func add(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
